@@ -85,6 +85,12 @@ public class MainFrame extends javax.swing.JFrame
         btnMontgomeryReduction = new javax.swing.JButton();
         btnMontgomeryMult = new javax.swing.JButton();
         btnMprime = new javax.swing.JButton();
+        jLabel11 = new javax.swing.JLabel();
+        btnMontgomeryReduction1 = new javax.swing.JButton();
+        btnRadixFromM = new javax.swing.JButton();
+        btnMontgomeryMultBase2 = new javax.swing.JButton();
+        btnXprime = new javax.swing.JButton();
+        btnRadixFromMBase2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -112,7 +118,7 @@ public class MainFrame extends javax.swing.JFrame
         txtResult.setFont(new java.awt.Font("Monospaced", 0, 24)); // NOI18N
         txtResult.setText("0");
 
-        btnAdd.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        btnAdd.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         btnAdd.setText("R=A+B");
         btnAdd.addActionListener(new java.awt.event.ActionListener()
         {
@@ -122,7 +128,7 @@ public class MainFrame extends javax.swing.JFrame
             }
         });
 
-        btnSub.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        btnSub.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         btnSub.setText("R=A-B");
         btnSub.addActionListener(new java.awt.event.ActionListener()
         {
@@ -132,7 +138,7 @@ public class MainFrame extends javax.swing.JFrame
             }
         });
 
-        btnMult.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        btnMult.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         btnMult.setText("R=A*B");
         btnMult.addActionListener(new java.awt.event.ActionListener()
         {
@@ -142,7 +148,7 @@ public class MainFrame extends javax.swing.JFrame
             }
         });
 
-        jButton4.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jButton4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jButton4.setText("R=A/B");
         jButton4.addActionListener(new java.awt.event.ActionListener()
         {
@@ -152,7 +158,7 @@ public class MainFrame extends javax.swing.JFrame
             }
         });
 
-        btnMod.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        btnMod.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         btnMod.setText("R=A%m");
         btnMod.addActionListener(new java.awt.event.ActionListener()
         {
@@ -181,7 +187,7 @@ public class MainFrame extends javax.swing.JFrame
             }
         });
 
-        btnInvMod.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        btnInvMod.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         btnInvMod.setText("R=A^-1%m");
         btnInvMod.addActionListener(new java.awt.event.ActionListener()
         {
@@ -191,7 +197,7 @@ public class MainFrame extends javax.swing.JFrame
             }
         });
 
-        btnModMult.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        btnModMult.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         btnModMult.setText("R=A*B%m");
         btnModMult.addActionListener(new java.awt.event.ActionListener()
         {
@@ -210,7 +216,7 @@ public class MainFrame extends javax.swing.JFrame
             }
         });
 
-        btnRange.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        btnRange.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         btnRange.setText("R=A[t..b]");
         btnRange.addActionListener(new java.awt.event.ActionListener()
         {
@@ -220,7 +226,7 @@ public class MainFrame extends javax.swing.JFrame
             }
         });
 
-        btnMod2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        btnMod2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         btnMod2.setText("R=A%B");
         btnMod2.addActionListener(new java.awt.event.ActionListener()
         {
@@ -242,7 +248,7 @@ public class MainFrame extends javax.swing.JFrame
         jLabel6.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel6.setText("b:");
 
-        btnModPow.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        btnModPow.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         btnModPow.setText("R=A^B%m");
         btnModPow.addActionListener(new java.awt.event.ActionListener()
         {
@@ -264,8 +270,9 @@ public class MainFrame extends javax.swing.JFrame
 
         jLabel10.setText("Montgomery");
 
-        btnMontgomeryReduction.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        btnMontgomeryReduction.setText("R=A*C^-1%m");
+        btnMontgomeryReduction.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        btnMontgomeryReduction.setText("R=REDC(A)");
+        btnMontgomeryReduction.setToolTipText("R=A*radix^-1%m");
         btnMontgomeryReduction.addActionListener(new java.awt.event.ActionListener()
         {
             public void actionPerformed(java.awt.event.ActionEvent evt)
@@ -274,8 +281,9 @@ public class MainFrame extends javax.swing.JFrame
             }
         });
 
-        btnMontgomeryMult.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        btnMontgomeryMult.setText("R=A*B*C^-1%m");
+        btnMontgomeryMult.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        btnMontgomeryMult.setText("R=MON(A,B)");
+        btnMontgomeryMult.setToolTipText("R=A*B*radix^-1%m");
         btnMontgomeryMult.addActionListener(new java.awt.event.ActionListener()
         {
             public void actionPerformed(java.awt.event.ActionEvent evt)
@@ -284,13 +292,71 @@ public class MainFrame extends javax.swing.JFrame
             }
         });
 
-        btnMprime.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        btnMprime.setText("R=-m^-1%C");
+        btnMprime.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        btnMprime.setText("R=m'");
+        btnMprime.setToolTipText("m' is R=-m^-1%radix");
         btnMprime.addActionListener(new java.awt.event.ActionListener()
         {
             public void actionPerformed(java.awt.event.ActionEvent evt)
             {
                 btnMprimeActionPerformed(evt);
+            }
+        });
+
+        jLabel11.setText("Montgomery Base2");
+
+        btnMontgomeryReduction1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        btnMontgomeryReduction1.setText("R=REDC(A)");
+        btnMontgomeryReduction1.setToolTipText("R=A*radix^-1%m");
+        btnMontgomeryReduction1.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                btnMontgomeryReduction1ActionPerformed(evt);
+            }
+        });
+
+        btnRadixFromM.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        btnRadixFromM.setText("radix=radix(m)");
+        btnRadixFromM.setToolTipText("radix is 2^32*k so that > m");
+        btnRadixFromM.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                btnRadixFromMActionPerformed(evt);
+            }
+        });
+
+        btnMontgomeryMultBase2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        btnMontgomeryMultBase2.setText("R=MON(A,B)");
+        btnMontgomeryMultBase2.setToolTipText("R=A*B*radix^-1%m");
+        btnMontgomeryMultBase2.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                btnMontgomeryMultBase2ActionPerformed(evt);
+            }
+        });
+
+        btnXprime.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        btnXprime.setText("R=A'");
+        btnXprime.setToolTipText("A' = radix^2 % m * x % m");
+        btnXprime.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                btnXprimeActionPerformed(evt);
+            }
+        });
+
+        btnRadixFromMBase2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        btnRadixFromMBase2.setText("radix=radix(m)");
+        btnRadixFromMBase2.setToolTipText("radix is 2^32*k so that > m");
+        btnRadixFromMBase2.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                btnRadixFromMBase2ActionPerformed(evt);
             }
         });
 
@@ -326,7 +392,9 @@ public class MainFrame extends javax.swing.JFrame
                                     .addComponent(btnMult, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(btnSub, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(btnMod2))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(379, 379, 379)
+                                .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 146, Short.MAX_VALUE)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                         .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -335,7 +403,11 @@ public class MainFrame extends javax.swing.JFrame
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                         .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(txtTop, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                                        .addComponent(txtTop, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(486, 486, 486)
+                                .addComponent(btnMontgomeryReduction1, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(94, 94, 94)
                         .addComponent(btnDecimal, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -349,9 +421,9 @@ public class MainFrame extends javax.swing.JFrame
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel8))
-                        .addGap(24, 24, 24)
+                            .addComponent(jLabel8)
+                            .addComponent(btnAdd))
+                        .addGap(26, 26, 26)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -359,19 +431,32 @@ public class MainFrame extends javax.swing.JFrame
                                 .addComponent(btnModMult, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(btnMod, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(btnModPow, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                        .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
+                                .addGap(18, 18, 18)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(btnMontgomeryMult, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(btnMprime, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(0, 0, Short.MAX_VALUE))
+                                    .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(btnMontgomeryReduction, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(btnRange))
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(jLabel10, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(btnMontgomeryReduction, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 221, Short.MAX_VALUE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 148, Short.MAX_VALUE)
-                                .addComponent(btnRange)))))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(btnRadixFromM, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(btnMontgomeryMult, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                            .addGap(18, 18, 18)
+                                            .addComponent(btnMprime, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addGap(28, 28, 28)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(btnMontgomeryMultBase2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(btnXprime, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(btnRadixFromMBase2, javax.swing.GroupLayout.DEFAULT_SIZE, 192, Short.MAX_VALUE))
+                                .addGap(0, 0, Short.MAX_VALUE)))))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -403,39 +488,56 @@ public class MainFrame extends javax.swing.JFrame
                     .addComponent(txtResult, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel8)
-                    .addComponent(jLabel9)
-                    .addComponent(jLabel10))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnMod, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnMontgomeryReduction, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnRange, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnSub, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnModMult, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnMontgomeryMult, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtTop, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel5))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(btnMult, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(btnInvMod, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(btnMprime, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(txtBottom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel6)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnModPow, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnMod2, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel8)
+                            .addComponent(jLabel9)
+                            .addComponent(jLabel10))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnMod, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnMontgomeryReduction, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnRange, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(btnModMult, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(btnMontgomeryMult, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtTop, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel5))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(btnInvMod, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(btnMprime, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(btnXprime, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(txtBottom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabel6)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(btnModPow, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(btnRadixFromM, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(btnRadixFromMBase2, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(btnSub, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btnMult, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btnMod2, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnMontgomeryReduction1, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnMontgomeryMultBase2, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(19, Short.MAX_VALUE))
         );
 
         layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {btnAdd, btnMult, btnSub});
@@ -696,6 +798,65 @@ public class MainFrame extends javax.swing.JFrame
         }
     }//GEN-LAST:event_btnMprimeActionPerformed
 
+    private void btnMontgomeryReduction1ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btnMontgomeryReduction1ActionPerformed
+    {//GEN-HEADEREND:event_btnMontgomeryReduction1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnMontgomeryReduction1ActionPerformed
+
+    private void btnRadixFromMActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btnRadixFromMActionPerformed
+    {//GEN-HEADEREND:event_btnRadixFromMActionPerformed
+        try
+        {
+            getInputValues();
+            
+            int limbs = (m.bitLength() + 31) / 32;
+            BigInteger one = new BigInteger("1");
+            radix = one.shiftLeft(limbs*32);
+            setRadixOutputValue();
+        }
+        catch (Exception e)
+        {
+            setOutputError(e);
+        }
+    }//GEN-LAST:event_btnRadixFromMActionPerformed
+
+    private void btnMontgomeryMultBase2ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btnMontgomeryMultBase2ActionPerformed
+    {//GEN-HEADEREND:event_btnMontgomeryMultBase2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnMontgomeryMultBase2ActionPerformed
+
+    private void btnXprimeActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btnXprimeActionPerformed
+    {//GEN-HEADEREND:event_btnXprimeActionPerformed
+        try
+        {
+            getInputValues();
+            BigInteger radix2 = radix.multiply(radix).mod(m);
+//            r = r.multiply(radix2).multiply(b)
+            setOutputValue();
+        }
+        catch (Exception e)
+        {
+            setOutputError(e);
+        }
+    }//GEN-LAST:event_btnXprimeActionPerformed
+
+    private void btnRadixFromMBase2ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btnRadixFromMBase2ActionPerformed
+    {//GEN-HEADEREND:event_btnRadixFromMBase2ActionPerformed
+        try
+        {
+            getInputValues();
+            
+            int bits = m.bitLength();
+            BigInteger one = new BigInteger("1");
+            radix = one.shiftLeft(bits);
+            setRadixOutputValue();
+        }
+        catch (Exception e)
+        {
+            setOutputError(e);
+        }
+    }//GEN-LAST:event_btnRadixFromMBase2ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -752,14 +913,20 @@ public class MainFrame extends javax.swing.JFrame
     private javax.swing.JButton btnModMult;
     private javax.swing.JButton btnModPow;
     private javax.swing.JButton btnMontgomeryMult;
+    private javax.swing.JButton btnMontgomeryMultBase2;
     private javax.swing.JButton btnMontgomeryReduction;
+    private javax.swing.JButton btnMontgomeryReduction1;
     private javax.swing.JButton btnMprime;
     private javax.swing.JButton btnMult;
+    private javax.swing.JButton btnRadixFromM;
+    private javax.swing.JButton btnRadixFromMBase2;
     private javax.swing.JButton btnRange;
     private javax.swing.JButton btnSub;
+    private javax.swing.JButton btnXprime;
     private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -815,6 +982,16 @@ public class MainFrame extends javax.swing.JFrame
             txtResult.setText(r.toString(16).toUpperCase());
         else
             txtResult.setText(getLimbArrayFromBigInteger(r).toUpperCase());
+    }
+    
+    private void setRadixOutputValue()
+    {
+        if (btnDecimal.isSelected())
+            txtRadix.setText(radix.toString());
+        else if (btnHexadecimal.isSelected())
+            txtRadix.setText(radix.toString(16).toUpperCase());
+        else
+            txtRadix.setText(getLimbArrayFromBigInteger(radix).toUpperCase());
     }
 
     private BigInteger getBigIntegerFromLimbArray(String stext)
